@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sala</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #222;
+      min-width: 300px;
+      padding: 20px;
+    }
+
+    .kontejner {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .informacije {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .informacije h1 {
+      margin-bottom: 10px;
+      font-size: 28px;
+    }
+
+    .informacije p {
+      margin: 4px 0;
+      font-size: 18px;
+    }
+
+    .platno {
+      background-color: #444;
+      color: white;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 16px;
+      margin: 20px auto 35px;
+      max-width: 700px;
+      border-radius: 8px;
+      letter-spacing: 2px;
+    }
+
+    .sala {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      overflow-x: auto;
+    }
+
+    .red {
+      display: grid;
+      grid-template-columns: 40px repeat(10, 45px);
+      gap: 10px;
+      align-items: center;
+      min-width: max-content;
+    }
+
+    .oznaka-reda {
+      font-size: 24px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .sjediste {
+      width: 45px;
+      height: 45px;
+      border-radius: 4px;
+      border: 1px solid #999;
+    }
+
+    .slobodno {
+      background-color: green;
+    }
+
+    .zauzeto {
+      background-color: red;
+    }
+
+    .rezervisano {
+      background-color: gray;
+    }
+
+    .legenda {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .stavka-legende {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+    }
+
+    .boja {
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      border: 1px solid #999;
+    }
+
+    @media (max-width: 600px) {
+      .informacije h1 {
+        font-size: 22px;
+      }
+
+      .informacije p {
+        font-size: 16px;
+      }
+
+      .platno {
+        font-size: 22px;
+        padding: 12px;
+      }
+
+      .red {
+        grid-template-columns: 32px repeat(10, 34px);
+        gap: 6px;
+      }
+
+      .sjediste {
+        width: 34px;
+        height: 34px;
+      }
+
+      .oznaka-reda {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="kontejner">
+    <div class="informacije">
+      <h1>Svadba</h1>
+      <p>Vrijeme projekcije: 20:00</p>
+      <p>Broj sale: 3</p>
+    </div>
+
+    <div class="platno">PLATNO</div>
+
+    <div class="sala">
+      <div class="red">
+        <div class="oznaka-reda">A</div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+      </div>
+
+      <div class="red">
+        <div class="oznaka-reda">B</div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+      </div>
+
+      <div class="red">
+        <div class="oznaka-reda">C</div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+      </div>
+
+      <div class="red">
+        <div class="oznaka-reda">D</div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+      </div>
+
+      <div class="red">
+        <div class="oznaka-reda">E</div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+      </div>
+
+      <div class="red">
+        <div class="oznaka-reda">F</div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+      </div>
+
+      <div class="red">
+        <div class="oznaka-reda">G</div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste zauzeto"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+      </div>
+
+      <div class="red">
+        <div class="oznaka-reda">H</div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste slobodno"></div>
+        <div class="sjediste rezervisano"></div>
+        <div class="sjediste rezervisano"></div>
+      </div>
+    </div>
+
+    <div class="legenda">
+      <div class="stavka-legende">
+        <div class="boja slobodno"></div>
+        <span>Slobodno</span>
+      </div>
+      <div class="stavka-legende">
+        <div class="boja zauzeto"></div>
+        <span>Zauzeto</span>
+      </div>
+      <div class="stavka-legende">
+        <div class="boja rezervisano"></div>
+        <span>Rezervisano</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
