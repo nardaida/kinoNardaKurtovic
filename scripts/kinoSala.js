@@ -8,13 +8,14 @@ function validirajPodatke(podaci) {
     const dozvoljeniStatusi = ["slobodno", "zauzeto", "rezervisano"];
 
     for (let projekcija of podaci.projekcije) {
-        if (
-            !projekcija.film ||
-            !projekcija.vrijeme ||
-            !Array.isArray(projekcija.sjedista)
-        ) {
-            return false;
-        }
+        if(
+        !projekcija.film ||
+        !projekcija.vrijeme ||
+        projekcija.brojSale === undefined ||
+        !Array.isArray(projekcija.sjedista)
+    ){
+        return false;
+    }
 
         for (let sjediste of projekcija.sjedista) {
             if (
@@ -71,7 +72,8 @@ function iscrtajSalu() {
     infoDiv.innerHTML = `
         <h1>${projekcija.film}</h1>
         <p><strong>Vrijeme projekcije:</strong> ${projekcija.vrijeme}</p>
-    `;
+        <p><strong>Broj sale:</strong> ${projekcija.brojSale}</p>
+        `;
     salaDiv.appendChild(infoDiv);
 
     const platnoDiv = document.createElement("div");
